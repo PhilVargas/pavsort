@@ -1,6 +1,6 @@
 require_relative './spec_helper'
 describe Pavsort::Merge do
-  let(:case_test){%w{a c B D}}
+  let(:case_test){%w{D c B a}}
   let(:case_sorted){%w{a B c D}}
   let(:num_test){[3,7,2,9]}
   let(:num_sorted){[2,3,7,9]}
