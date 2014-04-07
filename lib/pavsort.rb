@@ -1,4 +1,4 @@
-module Sort
+module Pavsort
   class Merge
     class << self
 

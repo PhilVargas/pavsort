@@ -17,47 +17,47 @@ describe 'Benchmarks' do
     end
   end
 
-  context 'Sort::Merge.sort' do
+  context 'Pavsort::Merge.sort' do
     it 'should finish ordered within 10 seconds' do
       start = Time.now
-      Sort::Merge.sort(ordered)
+      Pavsort::Merge.sort(ordered)
       finish = Time.now
       expect( finish - start ).to be < 10
     end
 
     it 'should finish random within 10 seconds' do
       start = Time.now
-      Sort::Merge.sort(random)
+      Pavsort::Merge.sort(random)
       finish = Time.now
       expect( finish - start ).to be < 10
     end
 
     it 'should finish reverse within 10 seconds' do
       start = Time.now
-      Sort::Merge.sort(reverse)
+      Pavsort::Merge.sort(reverse)
       finish = Time.now
       expect( finish - start ).to be < 10
     end
   end
 
-  context 'Sort::Quick.sort' do
+  context 'Pavsort::Quick.sort' do
     it 'should finish ordered within 10 seconds' do
       start = Time.now
-      Sort::Quick.sort(ordered)
+      Pavsort::Quick.sort(ordered)
       finish = Time.now
       expect( finish - start ).to be < 10
     end
 
     it 'should finish random within 10 seconds' do
       start = Time.now
-      Sort::Quick.sort(random)
+      Pavsort::Quick.sort(random)
       finish = Time.now
       expect( finish - start ).to be < 10
     end
 
     it 'should finish reverse within 10 seconds' do
       start = Time.now
-      Sort::Quick.sort(reverse)
+      Pavsort::Quick.sort(reverse)
       finish = Time.now
       expect( finish - start ).to be < 10
     end
