@@ -14,7 +14,7 @@ describe Pavsort::Merge do
     end
 
     it 'sorts an array with numbers and strings' do
-      expect(Pavsort::Merge.sort(case_test+num_test)).to eq (num_sorted+case_sorted)
+      expect(Pavsort::Merge.sort((case_test+num_test).shuffle)).to eq (num_sorted+case_sorted)
     end
   end
 end
