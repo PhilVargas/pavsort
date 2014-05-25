@@ -22,21 +22,27 @@ describe 'Benchmarks' do
       start = Time.now
       Pavsort::Merge.sort(ordered)
       finish = Time.now
-      expect( finish - start ).to be < 10
+      runtime = finish - start
+      expect( runtime ).to be < 10
+      p "Method runtime is: #{runtime} seconds" #display benchmark time on rspec
     end
 
     it 'should finish random within 10 seconds' do
       start = Time.now
       Pavsort::Merge.sort(random)
       finish = Time.now
-      expect( finish - start ).to be < 10
+      runtime = finish - start
+      expect( runtime ).to be < 10
+      p "Method runtime is: #{runtime} seconds" #display benchmark time on rspec
     end
 
     it 'should finish reverse within 10 seconds' do
       start = Time.now
       Pavsort::Merge.sort(reverse)
       finish = Time.now
-      expect( finish - start ).to be < 10
+      runtime = finish - start
+      expect( runtime ).to be < 10
+      p "Method runtime is: #{runtime} seconds" #display benchmark time on rspec
     end
   end
 
@@ -45,21 +51,27 @@ describe 'Benchmarks' do
       start = Time.now
       Pavsort::Quick.sort(ordered)
       finish = Time.now
-      expect( finish - start ).to be < 10
+      runtime = finish - start
+      expect( runtime ).to be < 10
+      p "Method runtime is: #{runtime} seconds" #display benchmark time on rspec
     end
 
     it 'should finish random within 10 seconds' do
       start = Time.now
       Pavsort::Quick.sort(random)
       finish = Time.now
-      expect( finish - start ).to be < 10
+      runtime = finish - start
+      expect( runtime ).to be < 10
+      p "Method runtime is: #{runtime} seconds" #display benchmark time on rspec
     end
 
     it 'should finish reverse within 10 seconds' do
       start = Time.now
       Pavsort::Quick.sort(reverse)
       finish = Time.now
-      expect( finish - start ).to be < 10
+      runtime = finish - start
+      expect( runtime ).to be < 10
+      p "Method runtime is: #{runtime} seconds" #display benchmark time on rspec
     end
   end
 end
